@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Database</title>
+{% endblock %}
+
+{% block content %}
+    <table>
+       <tr>
+        <th>id</th>
+        <th>amount</th>
+        <th>currency</th>
+        <th>description</th>
+        <th>purchases_date</th>
+       </tr>
+        {% for p in purchases %}
+           <tr>
+               <td>{{ p['id'] }}</td>
+               <td>{{ p['amount'] }}</td>
+               <td>{{ p['currency'] }}</td>
+               <td>{{ p['description'] }}</td>
+               <td>{{ p['purchases_date'] }}</td>
+           </tr>
+
+        {% endfor %}
+    </table>
+{% endblock %}

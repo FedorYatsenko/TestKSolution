@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+
+        {% block head %}{% endblock %}
+    </head>
+
+    <body>
+        <ul>
+            <li><a href="{{ url_for('main.index') }}">Главная</a>
+            <li><a href="{{ url_for('main.database') }}">База данных</a>
+            <li><a href="{{ url_for('main.logs') }}">Логи</a>
+        </ul>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

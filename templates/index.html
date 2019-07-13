@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Index</title>
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        <div>
+            <label for="amount">Сумма оплаты:</label>
+            <br>
+            <input type="number" id="amount" name="amount" placeholder="xxx.xx" step="0.01" required>
+        </div>
+
+        <div>
+            <label for="currency">Валюта оплаты:</label>
+            <br>
+            <select id="currency" name="currency" required>
+              <option>EUR</option>
+              <option>USD</option>
+              <option>RUB</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="description">Описание товара:</label>
+            <br>
+            <textarea id="description" name="description" rows="5" required></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Оплатить">
+        </div>
+    </form>
+{% endblock %}

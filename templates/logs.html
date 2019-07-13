@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Logs</title>
+{% endblock %}
+
+{% block content %}
+    <p>
+        {% for l in logs %}
+           {{ l }}<br>
+        {% endfor %}
+    </p>
+{% endblock %}
